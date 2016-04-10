@@ -24,6 +24,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnerdisaster"
+                android:entries="@array/disastertype"
                 android:layout_column="1" />
         </TableRow>
 
@@ -42,6 +43,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnerrisklevel"
+                android:entries="@array/risklevel"
                 android:layout_column="1" />
         </TableRow>
 
@@ -52,17 +54,19 @@
             android:layout_height="match_parent"
             style="@style/disasterdetails">
 
-            <RadioButton
+            <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select Area"
-                android:id="@+id/radioButton"
-                android:layout_column="0" />
+                android:text="Area"
+                android:id="@+id/txtareashow"
+                />
 
             <Spinner
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinnerarea"
+                    android:id="@+id/spinnerarea"
+                android:entries="@array/areas"
                 android:layout_column="1" />
         </TableRow>
 
@@ -79,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Get Current Location"
-                android:id="@+id/radioButton2"
+                android:id="@+id/rbtnCurrent"
                 android:layout_column="0" />
         </TableRow>
         <TableRow
@@ -107,7 +111,7 @@
             style="@style/disasterdetails"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="New Text"
                 android:id="@+id/txtLatitude"
@@ -142,9 +146,8 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="@string/btnsuggest"
-        android:id="@+id/button"
+        android:id="@+id/btnSSubmit"
         style="@style/btnsuggest"
         android:layout_below="@+id/disastertbl"
-
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

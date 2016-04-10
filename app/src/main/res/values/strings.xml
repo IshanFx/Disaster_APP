@@ -4,6 +4,7 @@
     <string name="btnsuggest">Suggest This</string>
     <string name="title_activity_disaster_map">Map</string>
     <string name="title_activity_login">DisLert</string>
+    <string name="action_suggestion">Suggest</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -17,4 +18,22 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string-array name="disastertype">
+        <item>Flood</item>
+        <item>Land Slide</item>
+        <item>Fire</item>
+    </string-array>
+
+    <string-array name="risklevel">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+
+    <string-array name="areas">
+        <item>Colombo</item>
+        <item>Gampaha</item>
+        <item>Polonnaruwa</item>
+    </string-array>
 </resources>

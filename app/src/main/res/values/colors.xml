@@ -3,4 +3,13 @@
     <color name="colorPrimary">#272A30</color>
     <color name="colorPrimaryDark">#272A30</color>
     <color name="colorAccent">#FAF022</color>
+
+    <color name="listback">#DDE1E7</color>
+    <color name="listdivider">#EF3131</color>
+    <color name="listfont">#1C2A33</color>
+    <color name="mainfont">#fff</color>
+
+    <color name="darkmate">#1C2A33</color>
+    <color name="blue">#17BDFF</color>
+    <color name="gray">#7E8692</color>
 </resources>
