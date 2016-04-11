@@ -1,42 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_margin="10dp"
-    android:padding="2dp"
+
     android:elevation="5dp"
-    android:background="@color/darkmate"
+    android:background="@color/listback"
     android:layout_gravity="center_horizontal"
-    android:layout_height="152dp">
+    android:layout_height="150dp">
 
-        <ImageView
-            android:id="@+id/imgIcon"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:gravity="center_horizontal"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-           />
+    <TextView android:id="@+id/txtareanamelist"
+        style="@style/listStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diyathalawa"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
 
-        <TextView android:id="@+id/txtTitle"
+        <TextView android:id="@+id/txtdisasterlist"
             style="@style/listStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Land Slide"
+            android:layout_below="@+id/txtareanamelist"
+             />
+
+        <TextView android:id="@+id/txtdatelist"
+            style="@style/listStyle"
+            android:text="2012-8-12"
+            android:layout_marginLeft="200dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp" />
-
-        <TextView android:id="@+id/txtDate"
-            style="@style/listStyle"
             android:layout_width="match_parent"
-            android:layout_marginTop="40dp"
             android:layout_height="wrap_content"
             />
-        <TextView android:id="@+id/txtType"
+        <TextView android:id="@+id/txtrisklist"
             style="@style/listStyle"
+            android:textColor="@color/darkgray"
             android:layout_width="match_parent"
-            android:layout_marginTop="70dp"
+            android:layout_below="@+id/txtdisasterlist"
+            android:text="High Risk"
             android:layout_height="wrap_content"
             />
+    <TextView android:id="@+id/txtmessagelist"
+        style="@style/listStyle"
+        android:textColor="@color/darkgray"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txtrisklist"
+        android:text="High Risk"
+        android:layout_height="wrap_content"
+        />
 
 
 </RelativeLayout>

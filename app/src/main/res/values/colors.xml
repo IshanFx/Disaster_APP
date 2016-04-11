@@ -4,12 +4,13 @@
     <color name="colorPrimaryDark">#272A30</color>
     <color name="colorAccent">#FAF022</color>
 
-    <color name="listback">#DDE1E7</color>
-    <color name="listdivider">#EF3131</color>
-    <color name="listfont">#1C2A33</color>
+    <color name="listback">#f8f6f2</color>
+    <color name="listdivider">#d5d3d0</color>
+    <color name="listfont">#2d2d2d</color>
     <color name="mainfont">#fff</color>
 
     <color name="darkmate">#1C2A33</color>
     <color name="blue">#17BDFF</color>
     <color name="gray">#7E8692</color>
+    <color name="darkgray">#131313</color>
 </resources>

@@ -51,6 +51,7 @@ public class SuggestionActivity extends AppCompatActivity  implements GoogleApiC
     RadioButton btnCurrentLocation;
     Spinner spinDisasterType,spinRiskLevel,spinArea;
     Suggestion suggest = new Suggestion();
+    Map<String, String> parameters = new HashMap<String, String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -173,26 +174,17 @@ public class SuggestionActivity extends AppCompatActivity  implements GoogleApiC
 
         @Override
         protected void onPreExecute() {
-            /*suggest.setSLatitude(txtLatitude.getText().toString());
-            suggest.setSLongitude(txtLongitude.getText().toString());
-            suggest.setSArea(spinArea.getSelectedItem().toString());
-            suggest.setSDisasterType(spinDisasterType.getSelectedItem().toString());
-            suggest.setSUser("1");*/
+            parameters.put("area", spinArea.getSelectedItem().toString());
+            parameters.put("userid","1");
+            parameters.put("disaster", spinDisasterType.getSelectedItem().toString());
+            parameters.put("latitude", txtLatitude.getText().toString());
+            parameters.put("longitude", txtLongitude.getText().toString());
 
             super.onPreExecute();
         }
 
         @Override
         protected Void doInBackground(Void... params) {
-
-            Map<String, String> parameters = new HashMap<String, String>();
-            parameters.put("Al_id", "qwe");
-            parameters.put("Area_id", "asd");
-            parameters.put("Disaster_id", "asd");
-            parameters.put("ALmessage", "asd");
-            parameters.put("ALriskLevel", "asd");
-            parameters.put("ALsafeLocation", "asd");
-
              RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                          /*StringRequest request = new StringRequest(Request.Method.POST,"http://192.168.42.200:8085/DisasterService.svc/alerts/save", new Response.Listener<String>() {
                              @Override
@@ -239,7 +231,7 @@ public class SuggestionActivity extends AppCompatActivity  implements GoogleApiC
                          request.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
                          queue.add(request);*/
             JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
-                    "http://192.168.42.200:8085/DisasterService.svc/alerts/save", new JSONObject(parameters),
+                    "http://192.168.42.200:8085/DisasterService.svc/suggestion/save", new JSONObject(parameters),
                     new Response.Listener<JSONObject>() {
 
                         @Override

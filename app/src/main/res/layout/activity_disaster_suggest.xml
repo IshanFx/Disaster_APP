@@ -18,12 +18,14 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Disaster Type"
+                android:textSize="@dimen/font_size"
                 android:id="@+id/txtDateShow"
                 />
             <Spinner
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnerdisaster"
+                android:textSize="@dimen/font_size"
                 android:entries="@array/disastertype"
                 android:layout_column="1" />
         </TableRow>
@@ -37,12 +39,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Risk Level"
+                android:textSize="@dimen/font_size"
                 android:id="@+id/txtTimeShow"
                 />
             <Spinner
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinnerrisklevel"
+                android:textSize="@dimen/font_size"
                 android:entries="@array/risklevel"
                 android:layout_column="1" />
         </TableRow>
@@ -55,7 +59,7 @@
             style="@style/disasterdetails">
 
             <TextView
-
+                android:textSize="@dimen/font_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Area"
@@ -66,6 +70,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                     android:id="@+id/spinnerarea"
+                android:textSize="@dimen/font_size"
                 android:entries="@array/areas"
                 android:layout_column="1" />
         </TableRow>
@@ -77,12 +82,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/disasterdetails">
 
+            style="@style/disasterdetails">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Get Current Location"
+                android:text="Get My Position"
+                android:textSize="@dimen/font_size"
                 android:id="@+id/rbtnCurrent"
                 android:layout_column="0" />
         </TableRow>
@@ -95,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Latitude"
+                android:textSize="@dimen/font_size"
                 android:id="@+id/txtLatitudeShow"
                 />
             <TextView
@@ -102,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtLongitudeShow"
                 android:text="Longitude"
+                android:textSize="@dimen/font_size"
                 android:layout_column="1"
                 android:layout_alignParentTop="true"
                 />
@@ -114,6 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:textSize="@dimen/font_size"
                 android:id="@+id/txtLatitude"
                 />
             <TextView
@@ -122,6 +131,7 @@
                 android:id="@+id/txtLongitude"
                 android:text="New Text"
                 android:layout_column="1"
+                android:textSize="@dimen/font_size"
                 android:layout_alignParentTop="true"
                 />
         </TableRow>
@@ -144,7 +154,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:text="@string/btnsuggest"
         android:id="@+id/btnSSubmit"
         style="@style/btnsuggest"

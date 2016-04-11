@@ -36,8 +36,16 @@ public class DisasterAdapter  extends ArrayAdapter<Alert> {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.listview_item, null);
-        TextView txt = (TextView) view.findViewById(R.id.txtTitle);
-        txt.setText(alert.getAMessage());
+        TextView txtmessage = (TextView) view.findViewById(R.id.txtmessagelist);
+        TextView txtarea = (TextView) view.findViewById(R.id.txtareanamelist);
+        TextView txtrisklevel = (TextView) view.findViewById(R.id.txtrisklist);
+        TextView txtdisaster = (TextView) view.findViewById(R.id.txtdisasterlist);
+        TextView txtdate = (TextView) view.findViewById(R.id.txtdatelist);
+        txtmessage.setText(alert.getAMessage());
+        txtarea.setText(alert.getArea_name());
+        txtrisklevel.setText(alert.getARiskLevel());
+        txtdisaster.setText(alert.getADisasterType());
+        txtdate.setText(alert.getADate());
       /*  TextView txt = (TextView) view.findViewById(R.id.txtTitle);
         TextView txtDate = (TextView) view.findViewById(R.id.txtDate);
         TextView txtType  = (TextView) view.findViewById(R.id.txtType);

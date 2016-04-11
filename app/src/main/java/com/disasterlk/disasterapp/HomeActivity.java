@@ -78,7 +78,9 @@ public class HomeActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         Alert alerts  = new Alert();
+        alerts.setArea_name("Area");
         alerts.setAMessage("sdad");
+        alerts.setADisasterType("asd");
         list.add(alerts);
         disasterAdapter = new DisasterAdapter(this, 1, list);
         disasterList = (ListView) findViewById(android.R.id.list);
@@ -135,11 +137,12 @@ public class HomeActivity extends AppCompatActivity {
                                     for(int x=0;x<alertArray.length();x++){
                                         JSONObject crimejsonObject = alertArray.getJSONObject(x);
                                         Alert alert = new Alert();
-                                        alert.setAMessage(crimejsonObject.getString("ALmessage"));
-                                        alert.setARiskLevel(crimejsonObject.getString("ALriskLevel"));
-                                        alert.setAlocation(crimejsonObject.getString("ALsafeLocation"));
-                                        alert.setADisasterType(crimejsonObject.getString("Disaster_id"));
-                                        alert.setADate(crimejsonObject.getString("ALdate"));
+                                        alert.setArea_name(crimejsonObject.getString("area"));
+                                        alert.setAMessage(crimejsonObject.getString("message"));
+                                        alert.setARiskLevel(crimejsonObject.getString("risklevel"));
+                                        alert.setAlocation(crimejsonObject.getString("safelocation"));
+                                        alert.setADisasterType(crimejsonObject.getString("disaster"));
+                                        alert.setADate(crimejsonObject.getString("date"));
                                         publishProgress(alert);
                                     }
 
@@ -148,10 +151,6 @@ public class HomeActivity extends AppCompatActivity {
                                     Log.d("Dip", e.toString());
                                 }
 
-                                JSONArray js = new JSONArray(response);
-                                new JSONObject(js.get(0).toString()).get("D_id").toString();
-                                Log.d("Res",  new JSONObject(js.get(0).toString()).get("Disaster_Name").toString());
-                                Log.d("Res", response.toString());
                             } catch (Exception ex) {
                                 Log.d("Res", ex.toString());
                             }
